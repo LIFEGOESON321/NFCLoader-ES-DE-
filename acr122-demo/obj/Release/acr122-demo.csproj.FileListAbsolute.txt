@@ -1,0 +1,13 @@
+C:\Users\mail\Downloads\acr122-demo\acr122-demo\bin\Release\PCSC.dll
+C:\Users\mail\Downloads\acr122-demo\acr122-demo\bin\Release\Sydesoft.NfcDevice.ACR122U.dll
+C:\Users\mail\Downloads\acr122-demo\acr122-demo\obj\Release\acr122-demo.csproj.AssemblyReference.cache
+C:\Users\mail\Downloads\acr122-demo\acr122-demo\obj\Release\acr122_demo.Form1.resources
+C:\Users\mail\Downloads\acr122-demo\acr122-demo\obj\Release\acr122-demo.csproj.GenerateResource.cache
+C:\Users\mail\Downloads\acr122-demo\acr122-demo\obj\Release\acr122-demo.csproj.CoreCompileInputs.cache
+C:\Users\mail\Downloads\acr122-demo\acr122-demo\obj\Release\acr122-d.84D2DC6F.Up2Date
+C:\Users\mail\Downloads\acr122-demo\acr122-demo\obj\Release\nfcloader.Properties.Resources.resources
+C:\Users\mail\Downloads\acr122-demo\acr122-demo\bin\Release\NFCLoader.exe.config
+C:\Users\mail\Downloads\acr122-demo\acr122-demo\bin\Release\NFCLoader.exe
+C:\Users\mail\Downloads\acr122-demo\acr122-demo\bin\Release\NFCLoader.pdb
+C:\Users\mail\Downloads\acr122-demo\acr122-demo\obj\Release\NFCLoader.exe
+C:\Users\mail\Downloads\acr122-demo\acr122-demo\obj\Release\NFCLoader.pdb
