@@ -16,8 +16,8 @@ namespace acr122_demo {
     public partial class Form1 : Form {
         private static MyACR122U acr122u = new MyACR122U();
 
-        [System.Runtime.InteropServices.DllImport("User32.dll")]
-        private static extern bool SetForegroundWindow(IntPtr handle);
+        //[System.Runtime.InteropServices.DllImport("User32.dll")]
+        //private static extern bool SetForegroundWindow(IntPtr handle);
 
         private IntPtr handle;
 
@@ -60,6 +60,10 @@ namespace acr122_demo {
                     cores.Add(values[2]);
                     roms.Add(values[3]);
                 }
+                }
+            else
+            {
+                MessageBox.Show(this, "No mapping.txt found. Please create a mapping.txt in the format:\n[ID],[Path To Emulator],[Path To Core],[Path To Rom]", "No mapping.txt found", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             for (int i = 0; i < cores.Count; i++)
@@ -77,9 +81,9 @@ namespace acr122_demo {
 
         }
 
-        [DllImport("user32.dll")]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
+        //[DllImport("user32.dll")]
+        //[return: MarshalAs(UnmanagedType.Bool)]
+        //static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
 
         private static void LoadRom(string id)
         {
@@ -95,11 +99,11 @@ namespace acr122_demo {
                 startInfo.Arguments = "-f -L \"" + GetCoreName(id)+ "\" \"" + GetRomName(id)+ "\"";
                 retroarchProcess= Process.Start(startInfo);
                 System.Threading.Thread.Sleep(2000);
-                ShowWindow(retroarchProcess.MainWindowHandle, 9);
-                System.Threading.Thread.Sleep(100);
-                SetForegroundWindow(retroarchProcess.MainWindowHandle);
-                System.Threading.Thread.Sleep(100);
-                SwitchToThisWindow(retroarchProcess.MainWindowHandle, true);
+               // ShowWindow(retroarchProcess.MainWindowHandle, 9);
+               // System.Threading.Thread.Sleep(100);
+               // SetForegroundWindow(retroarchProcess.MainWindowHandle);
+               // System.Threading.Thread.Sleep(100);
+               // SwitchToThisWindow(retroarchProcess.MainWindowHandle, true);
 
                 SetCursorPos(5, 5);
                 uint X = (uint)Cursor.Position.X;
@@ -114,8 +118,8 @@ namespace acr122_demo {
         [return: MarshalAs(UnmanagedType.Bool)]
         private static extern bool SetCursorPos(int x, int y);
 
-        [DllImport("User32.dll", SetLastError = true)]
-        static extern void SwitchToThisWindow(IntPtr hWnd, bool fAltTab);
+        //[DllImport("User32.dll", SetLastError = true)]
+        //static extern void SwitchToThisWindow(IntPtr hWnd, bool fAltTab);
 
         private static string GetEmuName(string id)
         {
